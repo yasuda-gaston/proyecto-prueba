@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import ItemList from '../../components/ItemList';
+import MiCarousell from '../../components/MiCarousell';
 import productos from '../../data/products.json'
 
-const ItemListContainer = () => {
+const ItemListContainer = ({ greeting }) => {
 
     //declaro el estado
     const [products, setProducts] = useState([]);
@@ -30,6 +31,10 @@ const ItemListContainer = () => {
     return (
 
         <div>
+            <div className='hero'>
+                <h2>{greeting} </h2>
+                <MiCarousell />
+            </div>
             <ItemList productos={products} />
         </div>
 

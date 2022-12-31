@@ -1,11 +1,13 @@
 import './App.css';
+import NavBar from './components/NavBar';
 import ItemListContainer from './container/ItemListContainer';
 
-function App() {
+function App({ greeting }) {
   return (
     <div className="App">
 
-      <ItemListContainer />
+      <NavBar />
+      <ItemListContainer greeting={'Bienvenidos a Wakaba Soccer Shop'} />
 
 
     </div>
