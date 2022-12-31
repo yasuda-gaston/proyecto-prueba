@@ -7,18 +7,26 @@ import slider2 from './slider2.jpg'
 const MiCarousell = () => {
     return (
         <div>
-            <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
+            <div id="carouselExampleInterval" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img className="d-block w-100" src={slider0} alt="First slide" />
+                    <div className="carousel-item active" data-bs-interval="2000">
+                        <img src={slider0} className="d-block w-100" alt="slider0" />
                     </div>
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src={slider1} alt="Second slide" />
+                    <div className="carousel-item" data-bs-interval="2000">
+                        <img src={slider1} className="d-block w-100" alt="slider1" />
                     </div>
-                    <div className="carousel-item">
-                        <img className="d-block w-100" src={slider2} alt="Third slide" />
+                    <div className="carousel-item" data-bs-interval="2000">
+                        <img src={slider2} className="d-block w-100" alt="slider2" />
                     </div>
                 </div>
+                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                </button>
+                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     )
